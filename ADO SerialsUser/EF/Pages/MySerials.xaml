@@ -1,0 +1,56 @@
+﻿<Page x:Class="EF.Pages.MySerials"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+	Title="MySerials">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles\Templates.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="{StaticResource DefaultBlue}"></SolidColorBrush>
+        </Grid.Background>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <DockPanel LastChildFill="True">
+                <Border Background="White" CornerRadius="10" Padding="15,50,15,15" Margin="10,10,10,10">
+                    <TabControl>
+                        <TabItem Header="Watching">
+                            <DataGrid Name="WatchingSerials" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" Background="Transparent">
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn CellTemplate="{StaticResource ImageColumn}"></DataGridTemplateColumn>
+                                    <DataGridTextColumn MinWidth="100" Binding="{Binding Name}" Header="Name"></DataGridTextColumn>
+                                    <DataGridTextColumn MinWidth="100" Binding="{Binding Date}" Header="Year"></DataGridTextColumn>
+                                    <DataGridTextColumn MinWidth="100" Binding="{Binding TVChannel}" Header="Channel"></DataGridTextColumn>
+                                    <DataGridTextColumn MinWidth="100" Binding="{Binding Description}" Header="Desciption"></DataGridTextColumn>
+                                    <DataGridTextColumn MinWidth="100" Binding="{Binding Status}" Header="Status"></DataGridTextColumn>
+                                    <DataGridTextColumn MinWidth="100" Binding="{Binding UserMark}" Header="My Raiting"></DataGridTextColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </TabItem>
+                        <TabItem Header="Watched">
+                            <DataGrid Name="ViewedSerials" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" Background="Transparent">
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn CellTemplate="{StaticResource ImageColumn}"></DataGridTemplateColumn>
+                                    <DataGridTextColumn MinWidth="100" Binding="{Binding Name}" Header="Name"></DataGridTextColumn>
+                                    <DataGridTextColumn MinWidth="100" Binding="{Binding Date}" Header="Year"></DataGridTextColumn>
+                                    <DataGridTextColumn MinWidth="100" Binding="{Binding TVChannel}" Header="Channel"></DataGridTextColumn>
+                                    <DataGridTextColumn MinWidth="100" Binding="{Binding Description}" Header="Desciption"></DataGridTextColumn>
+                                    <DataGridTextColumn MinWidth="100" Binding="{Binding Status}" Header="Status"></DataGridTextColumn>
+                                    <DataGridTextColumn MinWidth="100" Binding="{Binding UserMark}" Header="My Raiting"></DataGridTextColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </TabItem>
+                    </TabControl>
+                    
+                </Border>
+            </DockPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

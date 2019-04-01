@@ -1,0 +1,42 @@
+﻿<Page x:Class="EF.Pages.RegPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+	Title="RegPage">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles\Templates.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="{StaticResource DefaultBlue}"></SolidColorBrush>
+        </Grid.Background>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Border Background="White" CornerRadius="10" Padding="15,50,15,15" Width="400" Margin="50,50,50,0">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" TextBlock.TextAlignment="Center" Width="200">
+                        <TextBlock Text="Registration" Style="{StaticResource DefaultFontStyle}" FontSize="25" Foreground="{StaticResource ForegroundMain}"></TextBlock>
+                        <TextBlock Text="Your favourite serials" Style="{StaticResource DefaultFontStyle}" FontSize="10" Foreground="{StaticResource ForegroundMain}" Margin="0 0 0 20"/>
+                        <TextBlock Text="User" Style="{StaticResource DefaultFontStyle}" Foreground="{StaticResource ForegroundMain}"></TextBlock>
+                        <TextBox x:Name="Login" Style="{StaticResource DefaultFontStyle}"/>
+                        <TextBlock Text="Password" Style="{StaticResource DefaultFontStyle}" Foreground="{StaticResource ForegroundMain}"></TextBlock>
+                        <PasswordBox x:Name="Password"/>
+                        <TextBlock Text="Email" Style="{StaticResource DefaultFontStyle}" Foreground="{StaticResource ForegroundMain}"></TextBlock>
+                        <TextBox x:Name="Email" Style="{StaticResource DefaultFontStyle}"/>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Button x:Name="btnRegister" BorderBrush="Transparent" Margin="10" Content="OK" Background="White" Foreground="#3099c5" Style="{StaticResource DefaultFontStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <Button x:Name="btnCancel" BorderBrush="Transparent" Margin="10" Content="Cancel" Background="White" Foreground="#3099c5" Style="{StaticResource DefaultFontStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

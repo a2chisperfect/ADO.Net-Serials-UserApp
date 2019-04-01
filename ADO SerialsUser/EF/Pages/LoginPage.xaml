@@ -1,0 +1,37 @@
+﻿<Page x:Class="EF.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+	Title="LoginPage">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles\Templates.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="{StaticResource DefaultBlue}"></SolidColorBrush>
+        </Grid.Background>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Border Background="White" CornerRadius="10" Padding="15,50,15,15" Width="400" Margin="50,50,50,0">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" TextBlock.TextAlignment="Center" Width="200">
+                        <TextBlock Text="Log In" Style="{StaticResource DefaultFontStyle}" FontSize="25" Foreground="{StaticResource ForegroundMain}"></TextBlock>
+                        <TextBlock Text="Your favourite serials" Style="{StaticResource DefaultFontStyle}" FontSize="10" Foreground="{StaticResource ForegroundMain}" Margin="0 0 0 20"/>
+                        <TextBlock Text="User" Style="{StaticResource DefaultFontStyle}" Foreground="{StaticResource ForegroundMain}"></TextBlock>
+                        <TextBox x:Name="Login" Style="{StaticResource DefaultFontStyle}"/>
+                        <TextBlock Text="Password" Style="{StaticResource DefaultFontStyle}" Foreground="{StaticResource ForegroundMain}"></TextBlock>
+                        <PasswordBox x:Name="Password" Margin="0 0 0 30" />
+                        <Button x:Name="btnConnect" BorderBrush="Transparent" Content="Connect" IsDefault="True" Background="White" Foreground="#3099c5" Style="{StaticResource DefaultFontStyle}" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+                <Button Name="btnReg" BorderBrush="Transparent" Content="I don't have an account" Background="#3099c5" Foreground="White" HorizontalAlignment="Center"></Button>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
